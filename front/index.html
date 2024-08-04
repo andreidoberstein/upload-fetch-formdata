@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .forms {
+      max-width: 100vh; 
+      display: flex;
+      gap: 12px;
+    }
+
+    .form-card {
+      border: dashed 1px #eee; 
+      padding: 10px; 
+      border-radius: 10px;
+      font-size: 12px;
+    }
+
+    button, input {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="forms">
+    <div class="form-card">
+      <p>Formulário de upload simples (1 arquivo)</p>
+      <input type="text" id="text" placeholder="descrição">
+      <input type="file" id="file">
+      <button type="button" onclick="handleSubmitFile(event)">Enviar arquivo</button>
+      </div>
+    <div>
+      
+    <div class="form-card">
+      <p>Formulário com array de upload (até 3 arquivos)</p>
+      <input type="text" id="description" placeholder="descrição">
+      <input type="file" id="files" name="files" multiple>
+      <button type="button" onclick="handleSubmitFiles(event)">Enviar arquivos</button>
+    </div>  
+  </div>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
